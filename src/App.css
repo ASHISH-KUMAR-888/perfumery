@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-1000px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideDown {
+    animation: slideDown 0.8s ease-out;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.boxy::-webkit-scrollbar {
+  display: none;
+}
+
+.boxy {
+  scrollbar-width: none;
+}
+
+.a-btn {
+  transition: all 0.01s ease;
+}
+
+.a-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: black;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.a-btn:hover::before {
+  width: 100%;
+}
+
+.search-boxy::-webkit-scrollbar {
+  display: none;
+  width: 6.7px;
+}
+
+.search-boxy:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.search-boxy::-webkit-scrollbar-thumb {
+  background-color: #d2b071;
+  cursor: grab;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.search-boxy::-webkit-scrollbar-thumb:hover {
+  background-color: #a08c6a;
+}
+
+.search-boxy::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+.search-boxy::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.video-con::-webkit-scrollbar {
+  display: none;
+  height: 6.7px;
+}
+
+.video-con:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.video-con::-webkit-scrollbar-thumb {
+  background-color: #d2b071;
+  cursor: grab;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.video-con::-webkit-scrollbar-thumb:hover {
+  background-color: #a08c6a;
+}
+
+.video-con::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+.video-con::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d2b071;
+  cursor: grab;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a08c6a;
+}
+
+::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.remove-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.a-btn:active {
+  color: #d2b070;
+}
+
+.a-btn:focus {
+  color: #d2b070;
+}
+
+.effect-btn:hover {
+  background: #d2b071;
+  color: black;
+}
+
+.footer-btnn:hover {
+  background: black;
+  color: #d2b071;
+}
